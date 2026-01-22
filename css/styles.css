@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-/* COLORES DEL LOGO */
+/* COLORES */
 :root {
     --violeta: #b388ff;
     --violeta-oscuro: #7c4dff;
@@ -29,14 +29,13 @@ body {
 
 /* HEADER */
 .header {
-    background-color: #ffffff;
     border-bottom: 2px solid var(--gris-suave);
 }
 
 .header-content {
     display: flex;
-    align-items: center;
     justify-content: space-between;
+    align-items: center;
     padding: 15px 0;
 }
 
@@ -65,7 +64,6 @@ body {
 .hero h1 {
     font-size: 2.6rem;
     margin-bottom: 15px;
-    color: #222;
 }
 
 .hero p {
@@ -75,12 +73,11 @@ body {
 
 .btn {
     background-color: var(--violeta);
-    color: white;
+    color: #fff;
     padding: 14px 30px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s ease;
 }
 
 .btn:hover {
@@ -93,10 +90,9 @@ section {
 }
 
 section h2 {
-    font-size: 2rem;
     text-align: center;
+    font-size: 2rem;
     margin-bottom: 40px;
-    color: #222;
 }
 
 /* PRODUCTOS */
@@ -107,13 +103,13 @@ section h2 {
 }
 
 .producto {
-    background-color: #ffffff;
+    background-color: #fff;
     border-radius: 18px;
     padding: 20px;
     text-align: center;
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease;
     overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
 .producto:hover {
@@ -125,17 +121,13 @@ section h2 {
     height: 220px;
     object-fit: cover;
     border-radius: 12px;
-    display: block;
     margin-bottom: 15px;
+    display: block;
 }
 
 .producto h3 {
-    margin-bottom: 10px;
     color: var(--violeta-oscuro);
-}
-
-.producto p {
-    font-size: 0.95rem;
+    margin-bottom: 10px;
 }
 
 /* SOBRE */
@@ -143,17 +135,12 @@ section h2 {
     max-width: 700px;
     margin: auto;
     text-align: center;
-    font-size: 1.05rem;
 }
 
 /* CONTACTO */
 .contacto {
     background-color: var(--gris-suave);
     text-align: center;
-}
-
-.contacto p {
-    margin: 10px 0;
 }
 
 .contacto a {
@@ -171,7 +158,6 @@ section h2 {
     text-align: center;
     padding: 20px;
     color: #777;
-    font-size: 0.9rem;
 }
 
 /* RESPONSIVE */
