@@ -90,3 +90,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
 });
+
+// ================================
+// LAZY LOADING REAL (IMÁGENES)
+// ================================
+const lazyImages = document.querySelectorAll("img.lazy");
+
+const lazyObserver = new IntersectionObserver(
+  (entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        img.src = img.dataset.src;
+        img.onload = () => img.classList.add("loaded");
+        observer.unobserve(img);
+      }
+    });
+  },
+  { rootMargin: "100px" }
+);
+
+lazyImages.forEach(img => lazyObserver.observe(img));
