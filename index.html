@@ -1,135 +1,97 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vape Sublimados | Productos Personalizados</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel = "stylesheet" href="js/main.js"
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vape Sublimados</title>
 
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-    <div class="container header-content">
-        <img src="assets/img/logo.png.jpg" alt="Vape Sublimados" class="logo">
+<header class="header reveal">
+  <div class="container header-content">
+    <img src="assets/img/logo.png.jpg" alt="Vape Sublimados" class="logo">
 
-        <nav class="nav">
-            <a href="#productos">Productos</a>
-            <a href="#sobre">Sobre nosotros</a>
-            <a href="#contacto">Contacto</a>
-        </nav>
-    </div>
+    <nav class="nav">
+      <a href="#productos">Productos</a>
+      <a href="#galeria">Galería</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </div>
 </header>
 
 <section class="hero fade-up">
-
-    <div class="container">
-        <h1>Sublimados personalizados a tu medida</h1>
-        <p>Productos únicos para regalos, eventos y marcas.</p>
-        <a href="#productos" class="btn">Ver productos</a>
-    </div>
+  <div class="container">
+    <h1>Sublimados personalizados</h1>
+    <p>Productos únicos para regalos y marcas</p>
+    <a href="#productos" class="btn">Ver productos</a>
+  </div>
 </section>
 
 <section id="productos">
-    <div class="container">
-        <h2>Nuestros Productos</h2>
+  <div class="container">
+    <h2 class="reveal">Nuestros productos</h2>
 
-        <div class="productos-grid">
-            <div class="producto">
-                <img src="assets/img/productos/tazas.jpeg" alt="Tazas sublimadas">
-                <h3>Tazas Sublimadas</h3>
-                <p>Diseños personalizados para regalar.</p>
-            </div>
+    <div class="productos-grid">
+      <div class="producto reveal">
+        <img src="assets/img/productos/tazas.jpeg">
+        <h3>Tazas</h3>
+        <p>Personalizadas</p>
+      </div>
 
-            <div class="producto">
-                <img src="assets/img/productos/remeras.jpeg" alt="Remeras personalizadas">
-                <h3>Remeras</h3>
-                <p>Estampados duraderos y modernos.</p>
-            </div>
+      <div class="producto reveal">
+        <img src="assets/img/productos/remeras.jpeg">
+        <h3>Remeras</h3>
+        <p>Diseños únicos</p>
+      </div>
 
-            <div class="producto">
-                <img src="assets/img/productos/botella.jpeg" alt="Botellas sublimadas">
-                <h3>Botellas</h3>
-                <p>Ideales para uso diario o regalos.</p>
-            </div>
-
-            <div class="producto">
-                <img src="assets/img/productos/cinta-lanyard.jpeg" alt="Lanyards personalizados">
-                <h3>Lanyards</h3>
-                <p>Personalizados para eventos y empresas.</p>
-            </div>
-
-            <div class="producto">
-                <img src="assets/img/productos/agenda.jpeg" alt="Agendas sublimadas">
-                <h3>Agendas</h3>
-                <p>Diseños únicos y funcionales.</p>
-            </div>
-        </div>
+      <div class="producto reveal">
+        <img src="assets/img/productos/botella.jpeg">
+        <h3>Botellas</h3>
+        <p>Sublimadas</p>
+      </div>
     </div>
+  </div>
 </section>
-<!-- GALERÍA -->
+
 <section id="galeria">
-    <div class="container">
-        <h2>Galería</h2>
+  <div class="container">
+    <h2 class="reveal">Galería</h2>
 
-        <div class="galeria-grid">
-            <img src="assets/img/productos/tazas.jpeg" alt="Tazas sublimadas">
-            <img src="assets/img/productos/remeras.jpeg" alt="Remeras personalizadas">
-            <img src="assets/img/productos/botella.jpeg" alt="Botellas sublimadas">
-            <img src="assets/img/productos/cinta-lanyard.jpeg" alt="Lanyards">
-            <img src="assets/img/productos/agenda.jpeg" alt="Agendas sublimadas">
-        </div>
+    <div class="galeria-grid">
+      <img src="assets/img/productos/tazas.jpeg" class="reveal">
+      <img src="assets/img/productos/remeras.jpeg" class="reveal">
+      <img src="assets/img/productos/botella.jpeg" class="reveal">
     </div>
+  </div>
 </section>
 
-<!-- MODAL -->
-<div class="modal" id="modal">
-    <span class="modal-close">&times;</span>
-    <img class="modal-img" id="modalImg">
-</div>
-
-<section id="sobre" class="sobre">
-    <div class="container">
-        <h2>Sobre Vape Sublimados</h2>
-        <p>
-            Somos un emprendimiento dedicado a la sublimación personalizada.
-            Cuidamos cada detalle para ofrecer productos de calidad y diseños únicos.
-        </p>
-    </div>
-</section>
-
-<section id="contacto" class="contacto">
-    <div class="container">
-        <h2>Contacto</h2>
-
-        <p>
-            📧 Email:
-            <a href="mailto:patio.fernando9@gmail.com">patio.fernando9@gmail.com</a>
-        </p>
-
-        <p>
-            📱 WhatsApp:
-            <a href="https://wa.me/5491126783018" target="_blank">
-                +54 9 11 2678-3018
-            </a>
-        </p>
-    </div>
+<section id="contacto" class="contacto reveal">
+  <div class="container">
+    <h2>Contacto</h2>
+    <p>📧 patio.fernando9@gmail.com</p>
+    <p>
+      📱
+      <a href="https://wa.me/5491126783018" target="_blank">
+        WhatsApp
+      </a>
+    </p>
+  </div>
 </section>
 
 <footer class="footer">
-    <p>© 2026 Vape Sublimados - Todos los derechos reservados</p>
+  <p>© 2026 Vape Sublimados</p>
 </footer>
-<div class="whatsapp-container">
-    <span class="whatsapp-tooltip">Hablá con nosotros</span>
 
-    <a href="https://wa.me/5491126783018"
-       class="whatsapp-float"
-       target="_blank"
-       aria-label="Contactar por WhatsApp">
-        💬
-    </a>
+<!-- WhatsApp -->
+<div class="whatsapp-container">
+  <span class="whatsapp-tooltip">Hablá con nosotros</span>
+  <a href="https://wa.me/5491126783018" class="whatsapp-float" target="_blank">💬</a>
 </div>
+
+<script src="main.js"></script>
 
 
 </body>
