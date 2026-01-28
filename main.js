@@ -111,3 +111,36 @@ const lazyObserver = new IntersectionObserver(
 );
 
 lazyImages.forEach(img => lazyObserver.observe(img));
+
+// ================================
+// LAZY LOADING + SKELETON
+// ================================
+document.addEventListener("DOMContentLoaded", () => {
+
+  const lazyImages = document.querySelectorAll("img.lazy");
+
+  const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const img = entry.target;
+        const skeleton = img.previousElementSibling;
+
+        img.src = img.dataset.src;
+
+        img.onload = () => {
+          img.classList.add("loaded");
+          if (skeleton && skeleton.classList.contains("skeleton")) {
+            skeleton.style.display = "none";
+          }
+        };
+
+        observer.unobserve(img);
+      }
+    });
+  }, {
+    rootMargin: "150px"
+  });
+
+  lazyImages.forEach(img => imageObserver.observe(img));
+
+});
