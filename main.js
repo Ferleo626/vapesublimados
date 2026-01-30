@@ -144,3 +144,42 @@ document.addEventListener("DOMContentLoaded", () => {
   lazyImages.forEach(img => imageObserver.observe(img));
 
 });
+document.querySelectorAll('a[href*="wa.me"]').forEach(btn => {
+  btn.addEventListener('click', () => {
+    gtag('event', 'click_whatsapp', {
+      event_category: 'engagement',
+      event_label: 'WhatsApp'
+    });
+  });
+});
+document.querySelectorAll('.presupuesto-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    gtag('event', 'click_presupuesto', {
+      event_category: 'conversion',
+      event_label: 'Presupuesto'
+    });
+  });
+});
+
+document.querySelectorAll('.producto').forEach(prod => {
+  prod.addEventListener('click', () => {
+    const nombre = prod.querySelector('h3')?.innerText || 'Producto';
+    gtag('event', 'click_producto', {
+      event_category: 'engagement',
+      event_label: nombre
+    });
+  });
+});
+let scrollTracked = false;
+
+window.addEventListener('scroll', () => {
+  const scrollPercent = (window.scrollY + window.innerHeight) / document.body.scrollHeight * 100;
+
+  if (scrollPercent > 90 && !scrollTracked) {
+    scrollTracked = true;
+    gtag('event', 'scroll_90', {
+      event_category: 'engagement',
+      event_label: 'Scroll 90%'
+    });
+  }
+});
