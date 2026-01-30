@@ -2,18 +2,18 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="google-site-verification" content="Cea5ljU3D8AntqHCJgpdRag7_GvH74g1J8NV7NkdaMI" />
+  <meta name="google-site-verification" content="Cea5ljU3D8AntqHCJgpdRag7_GvH74g1J8NV7NkdaMI">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<!-- Google tag (GA4) -->
- 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9L8E9SJ20"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Z9L8E9SJ20');
-</script>
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9L8E9SJ20"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z9L8E9SJ20');
+  </script>
 
   <title>Vape Sublimados | Productos Personalizados</title>
 
@@ -21,15 +21,11 @@
   <link rel="icon" href="assets/img/favicon.png" type="image/png">
   <link rel="shortcut icon" href="assets/img/favicon.png">
 
-  <!-- SEO BÁSICO -->
-  <meta name="description" content="Vape Sublimados: productos personalizados de sublimación. Tazas, remeras, botellas y regalos únicos.">
+  <!-- SEO -->
+  <meta name="description" content="Vape Sublimados: productos personalizados por sublimación. Tazas, remeras, botellas y regalos únicos.">
   <meta name="keywords" content="sublimación, productos personalizados, tazas sublimadas, remeras personalizadas">
   <meta name="author" content="Vape Sublimados">
   <meta name="robots" content="index, follow">
-  <meta name="googlebot" content="index, follow">
-
-  <!-- THEME COLOR -->
-  <meta name="theme-color" content="#000000">
 
   <!-- CANONICAL -->
   <link rel="canonical" href="https://ferleo626.github.io/vapesublimados/">
@@ -37,18 +33,17 @@
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Vape Sublimados | Productos Personalizados">
-  <meta property="og:description" content="Sublimados personalizados de alta calidad para regalos, eventos y marcas.">
+  <meta property="og:description" content="Sublimados personalizados de alta calidad.">
   <meta property="og:image" content="https://ferleo626.github.io/vapesublimados/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:type" content="image/png">
   <meta property="og:url" content="https://ferleo626.github.io/vapesublimados/">
   <meta property="og:site_name" content="Vape Sublimados">
 
-  <!-- TWITTER CARD -->
+  <!-- TWITTER -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vape Sublimados | Productos Personalizados">
-  <meta name="twitter:description" content="Tazas, remeras y botellas sublimadas. Diseños únicos.">
+  <meta name="twitter:description" content="Tazas, remeras y botellas sublimadas.">
   <meta name="twitter:image" content="https://ferleo626.github.io/vapesublimados/assets/img/og-image.png">
 
   <!-- CSS -->
@@ -72,17 +67,16 @@
       "https://wa.me/5491126783018"
     ],
     "priceRange": "$$",
-    "description": "Productos personalizados por sublimación: tazas, remeras, botellas y regalos únicos."
+    "description": "Productos personalizados por sublimación."
   }
   </script>
 </head>
 
 <body>
 
-<header class="header reveal">
+<header class="header">
   <div class="container header-content">
     <img src="assets/img/logo.png" alt="Vape Sublimados" class="logo">
-
     <nav class="nav">
       <a href="#productos">Productos</a>
       <a href="#galeria">Galería</a>
@@ -91,71 +85,71 @@
   </div>
 </header>
 
-<section class="hero fade-up">
+<section class="hero">
   <div class="container">
     <h1>Sublimados personalizados</h1>
     <p>Productos únicos para regalos y marcas</p>
 
-    <!-- CTA -->
-
-    <a href="#contacto" class="btn btn-cta presupuesto-btn">Pedir presupuesto</a>
-
+    <a
+      href="#contacto"
+      class="btn btn-cta"
+      onclick="gtag('event','click_presupuesto',{event_category:'cta',event_label:'hero'})"
+    >
+      Pedir presupuesto
+    </a>
   </div>
 </section>
 
 <section id="productos">
   <div class="container">
-    <h2 class="reveal">Nuestros productos</h2>
+    <h2>Nuestros productos</h2>
 
     <div class="productos-grid">
-
-      <article class="producto reveal" itemscope itemtype="https://schema.org/Product">
-        <div class="skeleton skeleton-img"></div>
-        <img data-src="assets/img/productos/tazas.jpeg" class="lazy" alt="Tazas sublimadas">
-        <h3 itemprop="name">Tazas</h3>
-        <p itemprop="description">Personalizadas</p>
+      <article class="producto">
+        <img src="assets/img/productos/tazas.jpeg" alt="Tazas sublimadas">
+        <h3>Tazas</h3>
+        <p>Personalizadas</p>
       </article>
 
-      <article class="producto reveal" itemscope itemtype="https://schema.org/Product">
-        <div class="skeleton skeleton-img"></div>
-        <img data-src="assets/img/productos/remeras.jpeg" class="lazy" alt="Remeras personalizadas">
-        <h3 itemprop="name">Remeras</h3>
-        <p itemprop="description">Diseños únicos</p>
+      <article class="producto">
+        <img src="assets/img/productos/remeras.jpeg" alt="Remeras personalizadas">
+        <h3>Remeras</h3>
+        <p>Diseños únicos</p>
       </article>
 
-      <article class="producto reveal" itemscope itemtype="https://schema.org/Product">
-        <div class="skeleton skeleton-img"></div>
-        <img data-src="assets/img/productos/botella.jpeg" class="lazy" alt="Botellas sublimadas">
-        <h3 itemprop="name">Botellas</h3>
-        <p itemprop="description">Sublimadas</p>
+      <article class="producto">
+        <img src="assets/img/productos/botella.jpeg" alt="Botellas sublimadas">
+        <h3>Botellas</h3>
+        <p>Sublimadas</p>
       </article>
-
     </div>
   </div>
 </section>
 
 <section id="galeria">
   <div class="container">
-    <h2 class="reveal">Galería</h2>
-
+    <h2>Galería</h2>
     <div class="galeria-grid">
-      <img data-src="assets/img/productos/tazas.jpeg" class="lazy reveal" alt="Galería de tazas sublimadas">
-      <img data-src="assets/img/productos/remeras.jpeg" class="lazy reveal" alt="Galería de remeras personalizadas">
-      <img data-src="assets/img/productos/botella.jpeg" class="lazy reveal" alt="Galería de botellas sublimadas">
+      <img src="assets/img/productos/tazas.jpeg" alt="Galería tazas">
+      <img src="assets/img/productos/remeras.jpeg" alt="Galería remeras">
+      <img src="assets/img/productos/botella.jpeg" alt="Galería botellas">
     </div>
   </div>
 </section>
 
-<section id="contacto" class="contacto reveal">
+<section id="contacto" class="contacto">
   <div class="container">
     <h2>Contacto</h2>
     <p>📧 patio.fernando9@gmail.com</p>
     <p>
       📱
-      <a href="https://wa.me/5491126783018?text=Hola%20Vape%20Sublimados,%20quiero%20pedir%20un%20presupuesto%20personalizado."
-         target="_blank"
-         rel="noopener">
-         WhatsApp
+      <a
+        href="https://wa.me/5491126783018?text=Hola%20Vape%20Sublimados,%20quiero%20pedir%20un%20presupuesto%20personalizado."
+        target="_blank"
+        rel="noopener"
+        onclick="gtag('event','click_whatsapp',{event_category:'contacto',event_label:'contacto'})"
+      >
+        WhatsApp
       </a>
     </p>
   </div>
@@ -168,15 +162,18 @@
 <!-- WhatsApp flotante -->
 <div class="whatsapp-container">
   <span class="whatsapp-tooltip">Hablá con nosotros</span>
-  <a href="https://wa.me/5491126783018?text=Hola%20Vape%20Sublimados,%20quiero%20pedir%20un%20presupuesto%20personalizado."
-     class="whatsapp-float"
-     target="_blank"
-     rel="noopener"
-     aria-label="Contactar por WhatsApp">💬</a>
-
+  <a
+    href="https://wa.me/5491126783018?text=Hola%20Vape%20Sublimados,%20quiero%20pedir%20un%20presupuesto%20personalizado."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+    onclick="gtag('event','click_whatsapp',{event_category:'contacto',event_label:'flotante'})"
+  >
+    💬
+  </a>
 </div>
 
-<!-- JS -->
 <script src="main.js"></script>
 
 </body>
