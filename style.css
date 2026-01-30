@@ -285,3 +285,17 @@ h2 {
   opacity: 1;
   filter: blur(0);
 }
+.btn-cta {
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-weight: bold;
+  display: inline-block;
+  transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.btn-cta:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(37,211,102,.4);
+}

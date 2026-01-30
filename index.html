@@ -7,9 +7,13 @@
 
   <title>Vape Sublimados | Productos Personalizados</title>
 
+  <!-- FAVICON -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
+  <link rel="shortcut icon" href="assets/img/favicon.png">
+
   <!-- SEO BÁSICO -->
-  <meta name="description" content="Vape Sublimados: productos personalizados de sublimación. Tazas, remeras, botellas y más. Diseños únicos para regalos, eventos y marcas.">
-  <meta name="keywords" content="sublimación, productos personalizados, tazas sublimadas, remeras personalizadas, regalos personalizados">
+  <meta name="description" content="Vape Sublimados: productos personalizados de sublimación. Tazas, remeras, botellas y regalos únicos.">
+  <meta name="keywords" content="sublimación, productos personalizados, tazas sublimadas, remeras personalizadas">
   <meta name="author" content="Vape Sublimados">
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
@@ -20,10 +24,10 @@
   <!-- CANONICAL -->
   <link rel="canonical" href="https://ferleo626.github.io/vapesublimados/">
 
-  <!-- OPEN GRAPH (WhatsApp / Facebook / Instagram) -->
+  <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
   <meta property="og:title" content="Vape Sublimados | Productos Personalizados">
-  <meta property="og:description" content="Sublimados personalizados de alta calidad. Ideal para regalos, eventos y marcas.">
+  <meta property="og:description" content="Sublimados personalizados de alta calidad para regalos, eventos y marcas.">
   <meta property="og:image" content="https://ferleo626.github.io/vapesublimados/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -34,14 +38,33 @@
   <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Vape Sublimados | Productos Personalizados">
-  <meta name="twitter:description" content="Tazas, remeras, botellas y más. Sublimados únicos y personalizados.">
+  <meta name="twitter:description" content="Tazas, remeras y botellas sublimadas. Diseños únicos.">
   <meta name="twitter:image" content="https://ferleo626.github.io/vapesublimados/assets/img/og-image.png">
-
-  <!-- FAVICON -->
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
   <!-- CSS -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- SCHEMA LOCAL BUSINESS -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Vape Sublimados",
+    "image": "https://ferleo626.github.io/vapesublimados/assets/img/og-image.png",
+    "url": "https://ferleo626.github.io/vapesublimados/",
+    "telephone": "+5491126783018",
+    "address": {
+      "@type": "PostalAddress",
+      "addressCountry": "AR",
+      "addressRegion": "Buenos Aires"
+    },
+    "sameAs": [
+      "https://wa.me/5491126783018"
+    ],
+    "priceRange": "$$",
+    "description": "Productos personalizados por sublimación: tazas, remeras, botellas y regalos únicos."
+  }
+  </script>
 </head>
 
 <body>
@@ -62,7 +85,9 @@
   <div class="container">
     <h1>Sublimados personalizados</h1>
     <p>Productos únicos para regalos y marcas</p>
-    <a href="#productos" class="btn">Ver productos</a>
+
+    <!-- CTA -->
+    <a href="#contacto" class="btn btn-cta">Pedir presupuesto</a>
   </div>
 </section>
 
@@ -72,25 +97,25 @@
 
     <div class="productos-grid">
 
-      <article class="producto reveal">
+      <article class="producto reveal" itemscope itemtype="https://schema.org/Product">
         <div class="skeleton skeleton-img"></div>
         <img data-src="assets/img/productos/tazas.jpeg" class="lazy" alt="Tazas sublimadas">
-        <h3>Tazas</h3>
-        <p>Personalizadas</p>
+        <h3 itemprop="name">Tazas</h3>
+        <p itemprop="description">Personalizadas</p>
       </article>
 
-      <article class="producto reveal">
+      <article class="producto reveal" itemscope itemtype="https://schema.org/Product">
         <div class="skeleton skeleton-img"></div>
         <img data-src="assets/img/productos/remeras.jpeg" class="lazy" alt="Remeras personalizadas">
-        <h3>Remeras</h3>
-        <p>Diseños únicos</p>
+        <h3 itemprop="name">Remeras</h3>
+        <p itemprop="description">Diseños únicos</p>
       </article>
 
-      <article class="producto reveal">
+      <article class="producto reveal" itemscope itemtype="https://schema.org/Product">
         <div class="skeleton skeleton-img"></div>
         <img data-src="assets/img/productos/botella.jpeg" class="lazy" alt="Botellas sublimadas">
-        <h3>Botellas</h3>
-        <p>Sublimadas</p>
+        <h3 itemprop="name">Botellas</h3>
+        <p itemprop="description">Sublimadas</p>
       </article>
 
     </div>
@@ -114,7 +139,12 @@
     <h2>Contacto</h2>
     <p>📧 patio.fernando9@gmail.com</p>
     <p>
-      📱 <a href="https://wa.me/5491126783018" target="_blank" rel="noopener">WhatsApp</a>
+      📱
+      <a href="https://wa.me/5491126783018?text=Hola%20Vape%20Sublimados,%20quiero%20pedir%20un%20presupuesto%20personalizado."
+         target="_blank"
+         rel="noopener">
+         WhatsApp
+      </a>
     </p>
   </div>
 </section>
@@ -126,13 +156,11 @@
 <!-- WhatsApp flotante -->
 <div class="whatsapp-container">
   <span class="whatsapp-tooltip">Hablá con nosotros</span>
-  <a
-    href="https://wa.me/5491126783018"
-    class="whatsapp-float"
-    target="_blank"
-    rel="noopener"
-    aria-label="Contactar por WhatsApp"
-  >💬</a>
+  <a href="https://wa.me/5491126783018?text=Hola%20Vape%20Sublimados,%20quiero%20pedir%20un%20presupuesto%20personalizado."
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Contactar por WhatsApp">💬</a>
 </div>
 
 <!-- JS -->
