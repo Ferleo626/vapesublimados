@@ -159,3 +159,14 @@ window.addEventListener("scroll", () => {
     });
   }
 });
+// ================================
+// SERVICE WORKER REGISTRATION
+// ================================
+if ("serviceWorker" in navigator) {
+  window.addEventListener("load", () => {
+    navigator.serviceWorker
+      .register("/vapesublimados/sw.js")
+      .then(() => console.log("✅ Service Worker registrado"))
+      .catch(err => console.error("❌ SW error:", err));
+  });
+}
