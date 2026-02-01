@@ -1,0 +1,23 @@
+{
+  "name": "Vape Sublimados",
+  "short_name": "Vape",
+  "description": "Productos personalizados por sublimación",
+  "start_url": "/vapesublimados/",
+  "scope": "/vapesublimados/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#7c4dff",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "assets/img/pwa-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/img/pwa-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
