@@ -2,33 +2,24 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="google-site-verification" content="Cea5ljU3D8AntqHCJgpdRag7_GvH74g1J8NV7NkdaMI">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Google Analytics GA4 -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9L8E9SJ20"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-Z9L8E9SJ20');
-  </script>
+  <!-- Google Search Console -->
+  <meta name="google-site-verification" content="Cea5ljU3D8AntqHCJgpdRag7_GvH74g1J8NV7NkdaMI">
 
   <title>Vape Sublimados | Productos Personalizados</title>
-
-  <!-- FAVICON -->
-  <link rel="icon" href="assets/img/favicon.png" type="image/png">
-  <link rel="shortcut icon" href="assets/img/favicon.png">
 
   <!-- SEO -->
   <meta name="description" content="Vape Sublimados: productos personalizados por sublimación. Tazas, remeras, botellas y regalos únicos.">
   <meta name="keywords" content="sublimación, productos personalizados, tazas sublimadas, remeras personalizadas">
   <meta name="author" content="Vape Sublimados">
   <meta name="robots" content="index, follow">
-
-  <!-- CANONICAL -->
   <link rel="canonical" href="https://ferleo626.github.io/vapesublimados/">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- FAVICON -->
+  <link rel="icon" href="assets/img/favicon.png" type="image/png">
 
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
@@ -46,8 +37,18 @@
   <meta name="twitter:description" content="Tazas, remeras y botellas sublimadas.">
   <meta name="twitter:image" content="https://ferleo626.github.io/vapesublimados/assets/img/og-image.png">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+  <!-- PRELOAD CSS -->
+  <link rel="preload" href="style.css" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="style.css"></noscript>
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z9L8E9SJ20"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-Z9L8E9SJ20');
+  </script>
 
   <!-- SCHEMA LOCAL BUSINESS -->
   <script type="application/ld+json">
@@ -63,9 +64,7 @@
       "addressCountry": "AR",
       "addressRegion": "Buenos Aires"
     },
-    "sameAs": [
-      "https://wa.me/5491126783018"
-    ],
+    "sameAs": ["https://wa.me/5491126783018"],
     "priceRange": "$$",
     "description": "Productos personalizados por sublimación."
   }
@@ -76,7 +75,7 @@
 
 <header class="header">
   <div class="container header-content">
-    <img src="assets/img/logo.png" alt="Vape Sublimados" class="logo">
+    <img src="assets/img/logo.png" alt="Vape Sublimados" class="logo" width="180" height="60">
     <nav class="nav">
       <a href="#productos">Productos</a>
       <a href="#galeria">Galería</a>
@@ -84,6 +83,8 @@
     </nav>
   </div>
 </header>
+
+<main>
 
 <section class="hero">
   <div class="container">
@@ -106,19 +107,19 @@
 
     <div class="productos-grid">
       <article class="producto">
-        <img src="assets/img/productos/tazas.jpeg" alt="Tazas sublimadas">
+        <img src="assets/img/productos/tazas.jpeg" alt="Tazas sublimadas" loading="lazy" width="400" height="300">
         <h3>Tazas</h3>
         <p>Personalizadas</p>
       </article>
 
       <article class="producto">
-        <img src="assets/img/productos/remeras.jpeg" alt="Remeras personalizadas">
+        <img src="assets/img/productos/remeras.jpeg" alt="Remeras personalizadas" loading="lazy" width="400" height="300">
         <h3>Remeras</h3>
         <p>Diseños únicos</p>
       </article>
 
       <article class="producto">
-        <img src="assets/img/productos/botella.jpeg" alt="Botellas sublimadas">
+        <img src="assets/img/productos/botella.jpeg" alt="Botellas sublimadas" loading="lazy" width="400" height="300">
         <h3>Botellas</h3>
         <p>Sublimadas</p>
       </article>
@@ -130,9 +131,9 @@
   <div class="container">
     <h2>Galería</h2>
     <div class="galeria-grid">
-      <img src="assets/img/productos/tazas.jpeg" alt="Galería tazas">
-      <img src="assets/img/productos/remeras.jpeg" alt="Galería remeras">
-      <img src="assets/img/productos/botella.jpeg" alt="Galería botellas">
+      <img src="assets/img/productos/tazas.jpeg" alt="Galería tazas" loading="lazy" width="400" height="300">
+      <img src="assets/img/productos/remeras.jpeg" alt="Galería remeras" loading="lazy" width="400" height="300">
+      <img src="assets/img/productos/botella.jpeg" alt="Galería botellas" loading="lazy" width="400" height="300">
     </div>
   </div>
 </section>
@@ -155,6 +156,8 @@
   </div>
 </section>
 
+</main>
+
 <footer class="footer">
   <p>© 2026 Vape Sublimados</p>
 </footer>
@@ -162,26 +165,25 @@
 <!-- WhatsApp flotante -->
 <div class="whatsapp-container">
   <span class="whatsapp-tooltip">Hablá con nosotros</span>
-<a
-  href="https://wa.me/5491126783018?text=Hola%20Vape%20Sublimados,%20quiero%20pedir%20un%20presupuesto%20personalizado."
-  class="whatsapp-float"
-  target="_blank"
-  rel="noopener"
-  aria-label="WhatsApp"
-  onclick="gtag('event','click_whatsapp',{event_category:'contacto',event_label:'flotante'})"
->
-  <img
-    src="assets/img/whatsapp.logo.png"
-    alt="WhatsApp Vape Sublimados"
-    width="32"
-    height="32"
-    loading="lazy"
+  <a
+    href="https://wa.me/5491126783018?text=Hola%20Vape%20Sublimados,%20quiero%20pedir%20un%20presupuesto%20personalizado."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener"
+    aria-label="WhatsApp"
+    onclick="gtag('event','click_whatsapp',{event_category:'contacto',event_label:'flotante'})"
   >
-</a>
-
+    <img
+      src="assets/img/whatsapp.logo.png"
+      alt="WhatsApp Vape Sublimados"
+      width="32"
+      height="32"
+      loading="lazy"
+    >
+  </a>
 </div>
 
-<script src="main.js"></script>
+<script src="main.js" defer></script>
 
 </body>
 </html>
