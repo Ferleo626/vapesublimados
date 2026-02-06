@@ -83,7 +83,7 @@
 
 <header class="header">
   <div class="container header-content">
-    <img src="assets/img/logo.png" alt="Vape Sublimados" class="logo" width="180" height="60">
+    <img src="assets/img/logo1.png" alt="Vape Sublimados" class="logo" >
     <nav class="nav">
       <a href="#productos">Productos</a>
       <a href="#galeria">Galería</a>
@@ -94,44 +94,39 @@
 
 <main>
 
-<section class="hero">
-  <div class="container">
-    <h1>Sublimados personalizados</h1>
-    <p>Productos únicos para regalos y marcas</p>
-
-    <a
-      href="#contacto"
-      class="btn btn-cta"
-      onclick="gtag('event','click_presupuesto',{event_category:'cta',event_label:'hero'})"
-    >
-      Pedir presupuesto
-    </a>
-  </div>
-</section>
+<section class="hero"> </section>
 
 <section id="productos">
   <div class="container">
     <h2>Nuestros productos</h2>
 
     <div class="productos-grid">
-      <article class="producto">
-        <img src="assets/img/productos/tazas.jpeg" alt="Tazas sublimadas" loading="lazy" width="400" height="300">
-        <h3>Tazas</h3>
-        <p>Personalizadas</p>
-      </article>
 
       <article class="producto">
-        <img src="assets/img/productos/remeras.jpeg" alt="Remeras personalizadas" loading="lazy" width="400" height="300">
-        <h3>Remeras</h3>
-        <p>Diseños únicos</p>
-      </article>
+  <a href="productos/tazas.html" aria-label="Ver tazas personalizadas">
+    <img src="assets/img/productos/tazas.jpeg" alt="Tazas sublimadas" loading="lazy" width="400" height="300">
+    <h3>Tazas</h3>
+    <p>Personalizadas</p>
+  </a>
+</article>
+
 
       <article class="producto">
-        <img src="assets/img/productos/botella.jpeg" alt="Botellas sublimadas" loading="lazy" width="400" height="300">
-        <h3>Botellas</h3>
-        <p>Sublimadas</p>
-      </article>
-    </div>
+  <a href="productos/remeras.html" aria-label="Ver remeras personalizadas">
+    <img src="assets/img/productos/remeras.jpeg" alt="Remeras sublimadas" loading="lazy" width="400" height="300">
+    <h3>Remeras</h3>
+    <p>Personalizadas</p>
+  </a>
+</article>
+
+
+      <article class="producto">
+  <a href="productos/botellas.html" aria-label="Ver botellas personalizadas">
+    <img src="assets/img/productos/botella.jpeg" alt="Botellas sublimadas" loading="lazy" width="400" height="300">
+    <h3>Botellas</h3>
+    <p>Personalizadas</p>
+  </a>
+</article>
   </div>
 </section>
 
@@ -192,6 +187,3 @@
 </div>
 
 <script src="main.js" defer></script>
-
-</body>
-</html>

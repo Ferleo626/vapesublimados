@@ -65,9 +65,10 @@ body {
 /* HERO */
 /* ============================= */
 .hero {
-  background: var(--suave);
-  padding: 90px 0;
-  text-align: center;
+  background: url("assets/img/banner.png") center/cover no-repeat;
+  width: 100%;
+  padding-top: 30%; /* ajustá según la proporción de la imagen */
+  position: relative;
 }
 
 .hero h1 {
@@ -114,7 +115,7 @@ body {
 /* SECCIONES */
 /* ============================= */
 section {
-  padding: 70px 0;
+  padding: 13px 0;
 }
 
 h2 {
