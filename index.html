@@ -24,10 +24,14 @@
   <meta name="theme-color" content="#ffffff">
 
   <!-- PWA -->
-  <link rel="manifest" href="/vapesublimados/manifest.json">
-  <link rel="apple-touch-icon" href="assets/img/pwa-192.png">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="assets/img/pwa-192.png">
+
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Vape Sublimados">
+
 
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
@@ -80,6 +84,40 @@
 </head>
 
 <body>
+  <!-- MENU HAMBURGUESA - PEDIDO CLIENTA -->
+<button id="vs-menu-btn" type="button" aria-label="Abrir menú">☰</button>
+
+
+<nav id="vs-side-menu">
+  <h3>Productos</h3>
+  <ul class="vs-menu">
+    <li class="vs-item">
+      <button class="vs-toggle">Bolsos & Mochilas <span>▾</span></button>
+      <ul class="vs-submenu">
+        <li>Bolsas</li>
+        <li>Bolsos</li>
+        <li>Maletines</li>
+      </ul>
+    </li>
+    <li class="vs-item">
+      <button class="vs-toggle">Drinkware <span>▾</span></button>
+      <ul class="vs-submenu">
+        <li>Mates & Termos</li>
+        <li>Botellas</li>
+      </ul>
+    </li>
+    <li class="vs-item">
+      <button class="vs-toggle">Home Office <span>▾</span></button>
+      <ul class="vs-submenu">
+        <li>Bolígrafos</li>
+        <li>Cuadernos</li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+<div id="vs-menu-overlay"></div>
+
 
 <header class="header">
   <div class="container header-content">
@@ -187,3 +225,7 @@
 </div>
 
 <script src="main.js" defer></script>
+
+</body>
+
+</html>

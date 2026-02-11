@@ -1,16 +1,17 @@
 const CACHE_NAME = "vape-sublimados-v1";
+
 const STATIC_ASSETS = [
-  "/vapesublimados/",
-  "/vapesublimados/index.html",
-  "/vapesublimados/style.css",
-  "/vapesublimados/main.js",
-  "/vapesublimados/assets/img/logo.png",
-  "/vapesublimados/assets/img/favicon.png",
-  "/vapesublimados/assets/img/og-image.png",
-  "/vapesublimados/assets/img/whatsapp.logo.png",
-  "/vapesublimados/assets/img/productos/tazas.jpeg",
-  "/vapesublimados/assets/img/productos/remeras.jpeg",
-  "/vapesublimados/assets/img/productos/botella.jpeg"
+  "index.html",
+  "style.css",
+  "main.js",
+  "manifest.json",
+  "assets/img/logo1.png",
+  "assets/img/favicon.png",
+  "assets/img/og-image.png",
+  "assets/img/whatsapp.logo.png",
+  "assets/img/productos/tazas.jpeg",
+  "assets/img/productos/remeras.jpeg",
+  "assets/img/productos/botella.jpeg"
 ];
 
 // ================================
@@ -18,7 +19,10 @@ const STATIC_ASSETS = [
 // ================================
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_ASSETS))
+    caches.open(CACHE_NAME).then(cache => {
+      console.log("📦 Cacheando assets");
+      return cache.addAll(STATIC_ASSETS);
+    })
   );
   self.skipWaiting();
 });
@@ -30,11 +34,9 @@ self.addEventListener("activate", event => {
   event.waitUntil(
     caches.keys().then(keys =>
       Promise.all(
-        keys.map(key => {
-          if (key !== CACHE_NAME) {
-            return caches.delete(key);
-          }
-        })
+        keys
+          .filter(key => key !== CACHE_NAME)
+          .map(key => caches.delete(key))
       )
     )
   );

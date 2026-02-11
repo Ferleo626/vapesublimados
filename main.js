@@ -1,36 +1,4 @@
-// ================================
-// CONFIRMACIÓN DE CARGA JS
-// ================================
-console.log("✅ JavaScript correctamente linkeado");
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  // ================================
-  // (OPCIONAL) BADGE DEBUG
-  // 👉 Comentá este bloque en producción
-  // ================================
-  /*
-  const badge = document.createElement("div");
-  badge.textContent = "JS OK";
-  Object.assign(badge.style, {
-    position: "fixed",
-    bottom: "10px",
-    left: "10px",
-    padding: "6px 12px",
-    background: "#7c4dff",
-    color: "#fff",
-    fontSize: "12px",
-    borderRadius: "12px",
-    zIndex: "9999",
-    boxShadow: "0 6px 15px rgba(0,0,0,.3)"
-  });
-  document.body.appendChild(badge);
-  */
-
-  // ================================
-  // REVEAL ANIMATIONS
-  // ================================
-  const reveals = document.querySelectorAll(".reveal");
+const reveals = document.querySelectorAll(".reveal");
 
   if (reveals.length) {
     const revealObserver = new IntersectionObserver((entries, obs) => {
@@ -140,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-});
 
 // ================================
 // SCROLL DEPTH 90% (GA4)
@@ -165,8 +132,37 @@ window.addEventListener("scroll", () => {
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker
-      .register("/vapesublimados/sw.js")
+      .register("sw.js")
       .then(() => console.log("✅ Service Worker registrado"))
       .catch(err => console.error("❌ SW error:", err));
   });
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  const btn = document.getElementById("vs-menu-btn");
+  const menu = document.getElementById("vs-side-menu");
+  const overlay = document.getElementById("vs-menu-overlay");
+  const toggles = document.querySelectorAll(".vs-toggle");
+
+  // ABRIR MENÚ
+  btn.addEventListener("click", () => {
+    menu.classList.add("vs-active");
+    overlay.classList.add("vs-active");
+    btn.classList.add("vs-hide");
+  });
+
+  // CERRAR MENÚ
+  overlay.addEventListener("click", () => {
+    menu.classList.remove("vs-active");
+    overlay.classList.remove("vs-active");
+    btn.classList.remove("vs-hide");
+  });
+
+  // SUBMENÚS
+  toggles.forEach(toggle => {
+    toggle.addEventListener("click", () => {
+      const item = toggle.closest(".vs-item");
+      item.classList.toggle("active");
+    });
+  });
+});

@@ -302,3 +302,151 @@ h2 {
   0% { background-position: 100% 0; }
   100% { background-position: -100% 0; }
 }
+/* ===============================
+   BOTÓN HAMBURGUESA
+================================ */
+/* BOTÓN HAMBURGUESA */
+#vs-menu-btn {
+  position: fixed;
+  top: 15px;
+  left: 15px;
+  font-size: 26px;
+  background: #a16da3;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 10000;
+  border-radius: 4px;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* OCULTAR BOTÓN CUANDO MENÚ ESTÁ ABIERTO */
+#vs-menu-btn.vs-hide {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* MENÚ LATERAL */
+#vs-side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100%;
+  background: #a16da3;
+  color: #fff;
+  padding: 20px;
+  transition: left 0.3s ease;
+  z-index: 9999;
+}
+
+#vs-side-menu.vs-active {
+  left: 0;
+}
+
+/* OVERLAY */
+#vs-menu-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  z-index: 9998;
+}
+
+#vs-menu-overlay.vs-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* SUBMENÚS */
+.vs-submenu {
+  list-style: none;
+  padding-left: 16px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.vs-item.active .vs-submenu {
+  max-height: 500px;
+}
+/* RESET VISUAL BOTONES DEL MENÚ */
+.vs-toggle {
+  width: 100%;
+  background: transparent;     /* 🔥 saca el blanco */
+  border: none;                /* 🔥 saca borde gris */
+  padding: 12px 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;              /* letras blancas */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* FLECHITA */
+.vs-toggle span {
+  color: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+/* ROTACIÓN FLECHA */
+.vs-item.active .vs-toggle span {
+  transform: rotate(180deg);
+}
+
+/* SUBMENÚ */
+.vs-submenu {
+  list-style: none;
+  padding-left: 16px;
+  margin: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  background: transparent; /* mismo fondo violeta */
+}
+
+/* SUBMENÚ VISIBLE */
+.vs-item.active .vs-submenu {
+  max-height: 500px;
+}
+
+/* ITEMS DEL SUBMENÚ */
+.vs-submenu li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* HOVER */
+.vs-submenu li:hover {
+  opacity: 0.8;
+}
+/* TÍTULO DEL MENÚ */
+#vs-side-menu h3 {
+  font-size: 20px;          /* más grande */
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+ border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+
+ /* línea divisoria */
+}
+
+/* ESPACIO ENTRE TÍTULO Y MENÚ */
+.vs-menu {
+  margin-top: 10px;
+}
+
+/* CADA CATEGORÍA (opcional, queda más prolijo) */
+.vs-item {
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
