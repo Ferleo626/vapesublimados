@@ -44,7 +44,7 @@ self.addEventListener("activate", event => {
 // FETCH (Network First Strategy)
 // ================================
 self.addEventListener("fetch", event => {
-  // No cacheamos main.js, porque lo versionamos en el HTML
+  // No cacheamos main.js porque lo versionamos en el HTML
   if (event.request.url.includes("main.js")) {
     event.respondWith(fetch(event.request));
     return;
@@ -53,10 +53,14 @@ self.addEventListener("fetch", event => {
   event.respondWith(
     fetch(event.request)
       .then(response => {
+        // Clonamos la respuesta antes de cachearla
+        const responseClone = response.clone();
+
         // Guardamos en caché solo los assets estáticos
         if (STATIC_ASSETS.some(asset => event.request.url.includes(asset))) {
-          caches.open(CACHE_NAME).then(cache => cache.put(event.request, response.clone()));
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, responseClone));
         }
+
         return response;
       })
       .catch(() => caches.match(event.request))
