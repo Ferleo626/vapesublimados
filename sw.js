@@ -1,17 +1,17 @@
-const CACHE_NAME = "vape-sublimados-v1";
+const CACHE_NAME = "vape-sublimados-v3";
 
 const STATIC_ASSETS = [
-  "index.html",
-  "style.css",
-  "main.js",
-  "manifest.json",
-  "assets/img/logo1.png",
-  "assets/img/favicon.png",
-  "assets/img/og-image.png",
-  "assets/img/whatsapp.logo.png",
-  "assets/img/productos/tazas.jpeg",
-  "assets/img/productos/remeras.jpeg",
-  "assets/img/productos/botella.jpeg"
+  "/vapesublimados/",
+  "/vapesublimados/index.html",
+  "/vapesublimados/style.css",
+  "/vapesublimados/manifest.json",
+  "/vapesublimados/assets/img/logo1.png",
+  "/vapesublimados/assets/img/favicon.png",
+  "/vapesublimados/assets/img/og-image.png",
+  "/vapesublimados/assets/img/whatsapp.logo.png",
+  "/vapesublimados/assets/img/productos/tazas.jpeg",
+  "/vapesublimados/assets/img/productos/remeras.jpeg",
+  "/vapesublimados/assets/img/productos/botella.jpeg"
 ];
 
 // ================================
@@ -19,10 +19,7 @@ const STATIC_ASSETS = [
 // ================================
 self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME).then(cache => {
-      console.log("📦 Cacheando assets");
-      return cache.addAll(STATIC_ASSETS);
-    })
+    caches.open(CACHE_NAME).then(cache => cache.addAll(STATIC_ASSETS))
   );
   self.skipWaiting();
 });
@@ -44,12 +41,24 @@ self.addEventListener("activate", event => {
 });
 
 // ================================
-// FETCH
+// FETCH (Network First Strategy)
 // ================================
 self.addEventListener("fetch", event => {
+  // No cacheamos main.js, porque lo versionamos en el HTML
+  if (event.request.url.includes("main.js")) {
+    event.respondWith(fetch(event.request));
+    return;
+  }
+
   event.respondWith(
-    caches.match(event.request).then(response => {
-      return response || fetch(event.request);
-    })
+    fetch(event.request)
+      .then(response => {
+        // Guardamos en caché solo los assets estáticos
+        if (STATIC_ASSETS.some(asset => event.request.url.includes(asset))) {
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, response.clone()));
+        }
+        return response;
+      })
+      .catch(() => caches.match(event.request))
   );
 });
