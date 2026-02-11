@@ -166,3 +166,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
+ // FILTRADO POR CATEGORÍA
+  document.querySelectorAll(".vs-submenu li").forEach(sub => {
+    sub.addEventListener("click", () => {
+      const filtro = sub.innerText.toLowerCase();
+      const productos = document.querySelectorAll(".producto");
+
+      productos.forEach(prod => {
+        const categorias = prod.dataset.categorias.split(",");
+        if (categorias.includes(filtro)) {
+          prod.style.display = "block";
+        } else {
+          prod.style.display = "none";
+        }
+      });
+
+      // Cerrar menú
+      document.getElementById("vs-side-menu").classList.remove("vs-active");
+      document.getElementById("vs-menu-overlay").classList.remove("vs-active");
+      document.getElementById("vs-menu-btn").classList.remove("vs-hide");
+    });
+  });
