@@ -127,16 +127,17 @@ window.addEventListener("scroll", () => {
   }
 });
 // ================================
-// SERVICE WORKER REGISTRATION
+// SERVICE WORKER DESACTIVADO TEMPORALMENTE
 // ================================
-if ("serviceWorker" in navigator) {
-  window.addEventListener("load", () => {
-    navigator.serviceWorker
-      .register("sw.js")
-      .then(() => console.log("✅ Service Worker registrado"))
-      .catch(err => console.error("❌ SW error:", err));
-  });
-}
+
+// if ("serviceWorker" in navigator) {
+//   window.addEventListener("load", () => {
+//     navigator.serviceWorker
+//       .register("sw.js")
+//       .then(() => console.log("✅ Service Worker registrado"))
+//       .catch(err => console.error("❌ SW error:", err));
+//   });
+// }
 
 document.addEventListener("DOMContentLoaded", () => {
   const btn = document.getElementById("vs-menu-btn");
