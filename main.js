@@ -768,3 +768,16 @@ document.addEventListener("DOMContentLoaded", function () {
   setInterval(nextSlide, 4000);
 
 });
+
+window.addEventListener("scroll", () => {
+  const hero = document.querySelector(".hero-content");
+  const scrollY = window.scrollY;
+
+  if (!hero) return;
+
+  // Movimiento vertical suave
+  hero.style.transform = `translateY(${scrollY * 0.2}px)`;
+
+  // Fade progresivo
+  hero.style.opacity = 1 - scrollY / 600;
+});
