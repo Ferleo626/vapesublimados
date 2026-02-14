@@ -366,7 +366,7 @@ const productos = [
     id: 6,
     nombre: "Cartuchera Slim",
     precio: 18500,
-    imagen: "assets/img/productos/Cartuchera-slim.png",
+    imagen: "assets/img/productos/Cartuchera-Slim.png",
     categorias: ["jardin", "cartucheras"],
     nuevo: true,
     masVendido: false},
@@ -398,7 +398,7 @@ const productos = [
     id: 10,
     nombre: "Botella",
     precio: 18500,
-    imagen: "assets/img/productos/Botella.jpeg",
+    imagen: "assets/img/productos/botella.jpeg",
     categorias: ["jardin", "botellas"],
     nuevo: true,
     masVendido: false},
@@ -540,7 +540,7 @@ const productos = [
   id: 27,
   nombre: "Chalecos Blancos",
   precio: 0,
-  imagen: "assets/img/productos/chaleco-blanco.png",
+  imagen: "assets/img/productos/Chaleco-blanco.png",
   categorias: ["indumentaria" , "chalecos"],
   nuevo: false,
   masVendido: false
@@ -549,7 +549,7 @@ const productos = [
   id: 28,
   nombre: "Chalecos Grises",
   precio: 0,
-  imagen: "assets/img/productos/chaleco-gris.png",
+  imagen: "assets/img/productos/Chaleco-gris.png",
   categorias: ["indumentaria" , "chalecos"],
   nuevo: false,
   masVendido: false
@@ -557,7 +557,7 @@ const productos = [
   id: 29,
   nombre: "Chalecos Negros",
   precio: 0,
-  imagen: "assets/img/productos/chaleco-negro.png",
+  imagen: "assets/img/productos/Chaleco-negro.png",
   categorias: ["indumentaria" , "chalecos"],
   nuevo: false,
   masVendido: false
@@ -566,7 +566,7 @@ const productos = [
   id: 30,
   nombre: "Chombas Blancas",
   precio: 0,
-  imagen: "assets/img/productos/chomba-blanca.png",
+  imagen: "assets/img/productos/Chomba-blanca.png",
   categorias: ["indumentaria" , "chombas"],
   nuevo: true,
   masVendido: false
@@ -575,7 +575,7 @@ const productos = [
   id: 31,
   nombre: "Chombas Negras",
   precio: 0,
-  imagen: "assets/img/productos/chomba-negra.png",
+  imagen: "assets/img/productos/Chomba-negra.png",
   categorias: ["indumentaria" , "chombas"],
   nuevo: true,
   masVendido: false
@@ -583,7 +583,7 @@ const productos = [
   id: 32,
   nombre: "Chombas Azules",
   precio: 0,
-  imagen: "assets/img/productos/chomba-azul.png",
+  imagen: "assets/img/productos/Chomba-azul.png",
   categorias: ["indumentaria" , "chombas"],
   nuevo: true,
   masVendido: false
@@ -592,7 +592,7 @@ const productos = [
   id: 33,
   nombre: "Gorros Azules",
   precio: 0,
-  imagen: "assets/img/productos/gorro-azul.png",
+  imagen: "assets/img/productos/Gorro-azul.png",
   categorias: ["indumentaria", "gorros"],
   nuevo: false,
   masVendido: false
@@ -601,7 +601,7 @@ const productos = [
   id: 34,
   nombre: "Gorros Negros",
   precio: 0,
-  imagen: "assets/img/productos/gorro-negro.png",
+  imagen: "assets/img/productos/Gorro-negro.png",
   categorias: ["indumentaria", "gorros"],
   nuevo: false,
   masVendido: false
@@ -609,7 +609,7 @@ const productos = [
   id: 35,
   nombre: "Gorros Rojos",
   precio: 0,
-  imagen: "assets/img/productos/gorro-rojo.png",
+  imagen: "assets/img/productos/Gorro-rojo.png",
   categorias: ["indumentaria", "gorros"],
   nuevo: false,
   masVendido: false
@@ -618,7 +618,7 @@ const productos = [
   id: 36,
   nombre: "Uniformes Jardin Maternal Azul",
   precio: 0,
-  imagen: "assets/img/productos/delantal-azul.png",
+  imagen: "assets/img/productos/Delantal-azul.png",
   categorias: ["indumentaria", "uniformes"],
   nuevo: true,
   masVendido: true
@@ -627,7 +627,7 @@ const productos = [
   id: 37,
   nombre: "Uniformes Jardin Maternal Rosa",
   precio: 0,
-  imagen: "assets/img/productos/delantal-rosa.png",
+  imagen: "assets/img/productos/Delantal-rosa.png",
   categorias: ["indumentaria", "uniformes"],
   nuevo: true,
   masVendido: true
@@ -636,7 +636,7 @@ const productos = [
   id: 38,
   nombre: "Uniformes Jardin Maternal Naranja",
   precio: 0,
-  imagen: "assets/img/productos/delantal-naranja.png",
+  imagen: "assets/img/productos/Delantal-naranja.png",
   categorias: ["indumentaria", "uniformes"],
   nuevo: true,
   masVendido: true
