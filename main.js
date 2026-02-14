@@ -717,41 +717,54 @@ faders.forEach(fader => {
 // LIGHTBOX
 // =============================
 
-const lightbox = document.getElementById("lightbox");
-const lightboxImg = document.querySelector(".lightbox-img");
-const closeBtn = document.querySelector(".lightbox-close");
+document.addEventListener("DOMContentLoaded", function () {
 
-document.querySelectorAll(".trabajo-item img").forEach(img => {
-  img.addEventListener("click", () => {
-    lightbox.classList.add("active");
-    lightboxImg.src = img.src;
-  });
-});
+  /* =========================
+     LIGHTBOX
+  ========================= */
 
-closeBtn.addEventListener("click", () => {
-  lightbox.classList.remove("active");
-});
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.querySelector(".lightbox-img");
+  const closeBtn = document.querySelector(".lightbox-close");
 
-lightbox.addEventListener("click", (e) => {
-  if (e.target === lightbox) {
-    lightbox.classList.remove("active");
-  }
-});
-const slides = document.querySelector(".slides");
-const slide = document.querySelectorAll(".slide");
+  if (lightbox && lightboxImg && closeBtn) {
 
-let index = 0;
-const totalSlides = slide.length;
+    document.querySelectorAll(".slide img").forEach(img => {
+      img.addEventListener("click", () => {
+        lightbox.classList.add("active");
+        lightboxImg.src = img.src;
+      });
+    });
 
-function nextSlide() {
-  index++;
+    closeBtn.addEventListener("click", () => {
+      lightbox.classList.remove("active");
+    });
 
-  if (index >= totalSlides) {
-    index = 0;
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove("active");
+      }
+    });
   }
 
-  slides.style.transform = `translateX(-${index * 100}%)`;
-}
+  /* =========================
+     SLIDER
+  ========================= */
 
-// Cambia cada 4 segundos
-setInterval(nextSlide, 4000);
+  const slides = document.querySelector(".slides");
+  const slide = document.querySelectorAll(".slide");
+
+  if (!slides || slide.length === 0) return;
+
+  let index = 0;
+  const totalSlides = slide.length;
+
+  function nextSlide() {
+    index++;
+    if (index >= totalSlides) index = 0;
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  }
+
+  setInterval(nextSlide, 4000);
+
+});
