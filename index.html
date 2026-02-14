@@ -4,405 +4,156 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Vape Sublimados | Productos Personalizados</title>
+
   <link rel="preload" href="style.css?v=1.1" as="style" onload="this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="style.css?v=1.1"></noscript>
+  <noscript>
+    <link rel="stylesheet" href="style.css?v=1.1">
+  </noscript>
 </head>
+
 <body>
 
-<!-- MENÚ HAMBURGUESA -->
-<button id="vs-menu-btn" type="button" aria-label="Abrir menú">☰</button>
-
+<!-- ============================= -->
+<!-- MENÚ LATERAL -->
+<!-- ============================= -->
 <nav id="vs-side-menu">
   <h3>Productos</h3>
+
   <ul class="vs-menu">
 
-  <!-- JARDÍN -->
-  <li class="vs-item">
-    <button class="vs-toggle">Jardín de Infantes <span>▾</span></button>
-    <ul class="vs-submenu">
-      <li>Mochilas</li>
-      <li>Bolsos</li>
-      <li>Cartucheras</li>
-      <li>Botellas</li>
-      <li>Tazas de Plástico</li>
-    </ul>
-  </li>
+    <li class="vs-item">
+      <button class="vs-toggle">
+        Jardín de Infantes <span>▾</span>
+      </button>
+      <ul class="vs-submenu">
+        <li>Mochilas</li>
+        <li>Bolsos</li>
+        <li>Cartucheras</li>
+        <li>Botellas</li>
+        <li>Tazas de Plástico</li>
+      </ul>
+    </li>
 
-  <!-- BEBIDAS & REGALOS -->
-  <li class="vs-item">
-    <button class="vs-toggle">Souvenirs & Regalos <span>▾</span></button>
-    <ul class="vs-submenu">
-      <li>Mates & Termos</li>
-      <li>Tazas de Cerámica</li>
-      <li>Botellas</li>
-    </ul>
-  </li>
+    <li class="vs-item">
+      <button class="vs-toggle">
+        Souvenirs & Regalos <span>▾</span>
+      </button>
+      <ul class="vs-submenu">
+        <li>Mates & Termos</li>
+        <li>Tazas de Cerámica</li>
+        <li>Botellas</li>
+      </ul>
+    </li>
 
-  <!-- INDUMENTARIA -->
-  <li class="vs-item">
-    <button class="vs-toggle">Indumentaria <span>▾</span></button>
-    <ul class="vs-submenu">
-      <li>Remeras</li>
-      <li>Buzos</li>
-      <li>Camperas</li>
-      <li>Chalecos</li>
-      <li>Chombas</li>
-      <li>Gorros</li>
-      <li>Uniformes</li>
-    </ul>
-  </li>
+    <li class="vs-item">
+      <button class="vs-toggle">
+        Indumentaria <span>▾</span>
+      </button>
+      <ul class="vs-submenu">
+        <li>Remeras</li>
+        <li>Buzos</li>
+        <li>Camperas</li>
+        <li>Chalecos</li>
+        <li>Chombas</li>
+        <li>Gorros</li>
+        <li>Uniformes</li>
+      </ul>
+    </li>
 
-</ul>
- </nav>
+  </ul>
+</nav>
+
 <div id="vs-menu-overlay"></div>
 
+<!-- ============================= -->
+<!-- HEADER -->
+<!-- ============================= -->
 <header class="header">
   <div class="container header-content">
-    <img src="assets/img/logo1.png" alt="Vape Sublimados" class="logo">
+
+    <div class="header-left">
+      <button id="vs-menu-btn" type="button" aria-label="Abrir menú">
+        ☰
+      </button>
+
+      <a href="index.html" class="logo-link">
+        <img src="assets/img/logo1.png"
+             alt="Vape Sublimados"
+             class="logo">
+      </a>
+    </div>
+
     <nav class="nav">
       <a href="#productos">Productos</a>
-      <a href="#galeria">Galería</a>
+      <a href="#trabajos">Trabajos Realizados</a>
       <a href="#contacto">Contacto</a>
     </nav>
+
   </div>
 </header>
 
+<!-- ============================= -->
+<!-- CARRITO FLOTANTE -->
+<!-- ============================= -->
+<a href="carrito.html" class="carrito-icono">
+  🛒
+  <span id="contador-carrito">0</span>
+</a>
+
+<!-- ============================= -->
+<!-- MAIN -->
+<!-- ============================= -->
 <main>
-  <section class="hero"></section>
 
-<section id="productos">
-  <div class="container">
-    <h2>Nuestros productos</h2>
-    <div class="productos-grid">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-overlay"></div>
 
-      <!-- JARDÍN DE INFANTES -->
-
-<!-- MOCHILAS -->
-<article class="producto" data-categorias="jardin,mochilas">
-  <a href="#">
-    <img src="assets/img/productos/Mochila-azul.png" alt="Mochila Jardín 1" loading="lazy">
-    <h3>Mochila Jardín 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="jardin,mochilas">
-  <a href="#">
-    <img src="assets/img/productos/Mochila-roja.png" alt="Mochila Jardín 2" loading="lazy">
-    <h3>Mochila Jardín 2</h3>
-  </a>
-</article>
-<article class="producto" data-categorias="jardin,mochilas">
-  <a href="#">
-    <img src="assets/img/productos/Mochila-rosa.png" alt="Mochila Jardín 3" loading="lazy">
-    <h3>Mochila Jardín 3</h3>
-  </a>
-</article>
-
-
-<!-- BOLSOS -->
-<article class="producto" data-categorias="jardin,bolsos">
-  <a href="#">
-    <img src="assets/img/productos/Bolso-jardin.jpg" alt="Bolso Jardín 1" loading="lazy">
-    <h3>Bolso Jardín 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="jardin,bolsos">
-  <a href="#">
-    <img src="assets/img/productos/BolsaBlanca.png" alt="Bolso Jardín 2" loading="lazy">
-    <h3>Bolso Jardín 2</h3>
-  </a>
-</article>
-
-
-<!-- CARTUCHERAS -->
-<article class="producto" data-categorias="jardin,cartucheras">
-  <a href="#">
-    <img src="assets/img/productos/Cartuchera-Slim.png" alt="Cartuchera 1" loading="lazy">
-    <h3>Cartuchera 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="jardin,cartucheras">
-  <a href="#">
-    <img src="assets/img/productos/Cartuchera-de-Solapa.png" alt="Cartuchera 2" loading="lazy">
-    <h3>Cartuchera 2</h3>
-  </a>
-</article>
-
-   <article class="producto" data-categorias="jardin,cartucheras">
-  <a href="#">
-    <img src="assets/img/productos/Cartuchera-Multicapa.png" alt="Cartuchera 3" loading="lazy">
-    <h3>Cartuchera 3</h3>
-  </a>
-</article>
-
-<!-- BOTELLAS -->
-<article class="producto" data-categorias="jardin,botellas">
-  <a href="#">
-    <img src="assets/img/productos/Botella-blanca.png" alt="Botella Infantil 1" loading="lazy">
-    <h3>Botella Infantil 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="jardin,botellas">
-  <a href="#">
-    <img src="assets/img/productos/botella2.png" alt="Botella Infantil 2" loading="lazy">
-    <h3>Botella Infantil 2</h3>
-  </a>
-</article>
-
-
-<!-- TAZAS DE PLÁSTICO -->
-<article class="producto" data-categorias="jardin,tazas-plastico">
-  <a href="#">
-    <img src="assets/img/productos/Taza-de-plastico.png" alt="Taza Plástica 1" loading="lazy">
-    <h3>Taza Plástica 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="jardin,tazas-plastico">
-  <a href="#">
-    <img src="assets/img/productos/tazas.jpeg" alt="Taza Plástica 2" loading="lazy">
-    <h3>Taza Plástica 2</h3>
-  </a>
-</article>
-<!-- SOUVENIRS & REGALOS -->
-
-<!-- MATES & TERMOS -->
-<article class="producto" data-categorias="souvenirs,mates">
-  <a href="#">
-    <img src="assets/img/productos/MateBlanco.png" alt="Mate 1" loading="lazy">
-    <h3>Mate 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="souvenirs,mates">
-  <a href="#">
-    <img src="assets/img/productos/TermoBlanco.png" alt="Mate 2" loading="lazy">
-    <h3>Mate 2</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="souvenirs,mates">
-  <a href="#">
-    <img src="assets/img/productos/MateyTermo.png" alt="Mate 3" loading="lazy">
-    <h3>Mate 3</h3>
-  </a>
-</article>
-
-
-<!-- TAZAS DE CERÁMICA -->
-<article class="producto" data-categorias="souvenirs,tazas-ceramica">
-  <a href="#">
-    <img src="assets/img/productos/Taza-blanca.png" alt="Taza Cerámica Blanca" loading="lazy">
-    <h3>Taza Cerámica Blanca</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="souvenirs,tazas-ceramica">
-  <a href="#">
-    <img src="assets/img/productos/Taza-magica3D.png" alt="Taza Mágica 3D" loading="lazy">
-    <h3>Taza Mágica 3D</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="souvenirs,tazas-ceramica">
-  <a href="#">
-    <img src="assets/img/productos/Taza-magicaEjem.png" alt="Taza Mágica" loading="lazy">
-    <h3>Taza Mágica</h3>
-  </a>
-</article>
-
-
-<!-- BOTELLAS -->
-<article class="producto" data-categorias="souvenirs,botellas">
-  <a href="#">
-    <img src="assets/img/productos/Botella-blanca.png" alt="Botella Souvenir 1" loading="lazy">
-    <h3>Botella Souvenir 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="souvenirs,botellas">
-  <a href="#">
-    <img src="assets/img/productos/botella.jpeg" alt="Botella Souvenir 2" loading="lazy">
-    <h3>Botella Souvenir 2</h3>
-  </a>
-</article>
-<!-- INDUMENTARIA -->
-
-<!-- REMERAS -->
-<article class="producto" data-categorias="indumentaria,remeras">
-  <a href="#">
-    <img src="assets/img/productos/Remera-blanca.png" alt="Remera Blanca" loading="lazy">
-    <h3>Remera Blanca</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,remeras">
-  <a href="#">
-    <img src="assets/img/productos/Remera-gris.png" alt="Remera Gris" loading="lazy">
-    <h3>Remera Gris</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,remeras">
-  <a href="#">
-    <img src="assets/img/productos/Remera-negra.jpeg" alt="Remera Negra" loading="lazy">
-    <h3>Remera Negra</h3>
-  </a>
-</article>
-
-
-<!-- BUZOS -->
-<article class="producto" data-categorias="indumentaria,buzos">
-  <a href="#">
-    <img src="assets/img/productos/Buzo-blanco.png" alt="Buzo Blanco" loading="lazy">
-    <h3>Buzo Blanco</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,buzos">
-  <a href="#">
-    <img src="assets/img/productos/Buzo-gris.png" alt="Buzo Gris" loading="lazy">
-    <h3>Buzo Gris</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,buzos">
-  <a href="#">
-    <img src="assets/img/productos/Buzo-negro.png" alt="Buzo Negro" loading="lazy">
-    <h3>Buzo Negro</h3>
-  </a>
-</article>
-
-
-<!-- CAMPERAS -->
-<article class="producto" data-categorias="indumentaria,camperas">
-  <a href="#">
-    <img src="assets/img/productos/Campera-blanca.png" alt="Campera 1" loading="lazy">
-    <h3>Campera 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,camperas">
-  <a href="#">
-    <img src="assets/img/productos/Campera-gris.png" alt="Campera 2" loading="lazy">
-    <h3>Campera 2</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,camperas">
-  <a href="#">
-    <img src="assets/img/productos/Campera-negra.png" alt="Campera 3" loading="lazy">
-    <h3>Campera 3</h3>
-  </a>
-</article>
-
-
-<!-- CHALECOS -->
-<article class="producto" data-categorias="indumentaria,chalecos">
-  <a href="#">
-    <img src="assets/img/productos/Chaleco-blanco.png" alt="Chaleco 1" loading="lazy">
-    <h3>Chaleco 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,chalecos">
-  <a href="#">
-    <img src="assets/img/productos/Chaleco-gris.png" alt="Chaleco 2" loading="lazy">
-    <h3>Chaleco 2</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,chalecos">
-  <a href="#">
-    <img src="assets/img/productos/Chaleco-negro.png" alt="Chaleco 3" loading="lazy">
-    <h3>Chaleco 3</h3>
-  </a>
-</article>
-
-
-<!-- CHOMBAS -->
-<article class="producto" data-categorias="indumentaria,chombas">
-  <a href="#">
-    <img src="assets/img/productos/Chomba-blanca.png" alt="Chomba 1" loading="lazy">
-    <h3>Chomba 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,chombas">
-  <a href="#">
-    <img src="assets/img/productos/Chomba-azul.png" alt="Chomba 2" loading="lazy">
-    <h3>Chomba 2</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,chombas">
-  <a href="#">
-    <img src="assets/img/productos/Chomba-negra.png" alt="Chomba 3" loading="lazy">
-    <h3>Chomba 3</h3>
-  </a>
-</article>
-
-
-<!-- GORROS -->
-<article class="producto" data-categorias="indumentaria,gorros">
-  <a href="#">
-    <img src="assets/img/productos/Gorro-negro.png" alt="Gorro Negro" loading="lazy">
-    <h3>Gorro Negro</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,gorros">
-  <a href="#">
-    <img src="assets/img/productos/Gorro-rojo.png" alt="Gorro Rojo" loading="lazy">
-    <h3>Gorro Rojo</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,gorros">
-  <a href="#">
-    <img src="assets/img/productos/Gorro-azul.png" alt="Gorro Azul" loading="lazy">
-    <h3>Gorro Azul</h3>
-  </a>
-</article>
-
-<!-- UNIFORMES -->
-<article class="producto" data-categorias="indumentaria,uniformes">
-  <a href="#">
-    <img src="assets/img/productos/Delantal-Rosa.png" alt="Uniforme 1" loading="lazy">
-    <h3>Uniforme 1</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,uniformes">
-  <a href="#">
-    <img src="assets/img/productos/Delantal-Rosa.png" alt="Uniforme 2" loading="lazy">
-    <h3>Uniforme 2</h3>
-  </a>
-</article>
-
-<article class="producto" data-categorias="indumentaria,uniformes">
-  <a href="#">
-    <img src="assets/img/productos/Delantal-naranja.png" alt="Uniforme 3" loading="lazy">
-    <h3>Uniforme 3</h3>
-  </a>
-</article>
-   
-  </div>
-</section>
-
-
-  <section id="galeria">
-    <div class="container">
-      <h2>Galería</h2>
-      <div class="galeria-grid">
-        <img src="assets/img/productos/placeholder.png" alt="Galería" loading="lazy">
-      </div>
+    <div class="hero-content container fade-up">
+      <h1>Personalizamos lo que imagines</h1>
+      <p>Indumentaria • Mochilas • Regalos • Sublimados únicos</p>
+      <a href="#productos" class="btn-hero">Ver productos</a>
     </div>
   </section>
 
+  <!-- PRODUCTOS -->
+  <section id="productos" class="productos">
+    <div class="container">
+      <div class="productos-grid" id="productos-container"></div>
+    </div>
+  </section>
+
+  <!-- TRABAJOS REALIZADOS -->
+  <section id="trabajos" class="trabajos">
+    <div class="container">
+      <h2>Trabajos Realizados</h2>
+
+      <div class="slider">
+        <div class="slides">
+
+          <div class="slide">
+            <img src="assets/img/productos/buzonaruto.jpeg" alt="Buzos personalizados">
+          </div>
+
+          <div class="slide">
+            <img src="assets/img/productos/agenda.jpeg" alt="Agendas sublimadas">
+          </div>
+
+          <div class="slide">
+            <img src="assets/img/productos/tazabocajrs.jpeg" alt="Tazas personalizadas">
+          </div>
+
+          <div class="slide">
+            <img src="assets/img/productos/yerbero.jpeg" alt="Yerberos personalizados">
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
   <section id="contacto" class="contacto">
     <div class="container">
       <h2>Contacto</h2>
@@ -410,14 +161,20 @@
       <p>📱 <a href="https://wa.me/5491126783018" target="_blank">WhatsApp</a></p>
     </div>
   </section>
+
 </main>
 
+<!-- ============================= -->
+<!-- FOOTER -->
+<!-- ============================= -->
 <footer class="footer">
   <p>© 2026 Vape Sublimados</p>
 </footer>
 
+<!-- ============================= -->
+<!-- SCRIPTS -->
+<!-- ============================= -->
 <script src="main.js?v=1.1"></script>
 
 </body>
-</html>
-``
+ </html>
