@@ -7,9 +7,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ============================= */
-/* VARIABLES */
-/* ============================= */
+
 :root {
   --violeta: #b388ff;
   --violeta-oscuro: #7c4dff;
@@ -17,9 +15,7 @@ html {
   --suave: #f4f4f4;
 }
 
-/* ============================= */
-/* GENERAL */
-/* ============================= */
+
 body {
   font-family: 'Segoe UI', sans-serif;
   color: var(--gris);
@@ -32,9 +28,7 @@ body {
   padding: 0 20px;
 }
 
-/* ============================= */
-/* HEADER */
-/* ============================= */
+
 .header {
   position: sticky;
   top: 0;
@@ -62,9 +56,7 @@ body {
   color: var(--violeta-oscuro);
 }
 
-/* ============================= */
-/* HERO */
-/* ============================= */
+
 .hero {
   position: relative;
   min-height: 75vh; /* 👈 mejor proporción */
@@ -75,7 +67,7 @@ body {
   overflow: hidden;
 }
 
-/* Overlay más elegante */
+
 .hero-overlay {
   position: absolute;
   inset: 0;
@@ -112,7 +104,7 @@ body {
   opacity: 0.95;
 }
 
-/* Botón premium */
+
 .btn-hero {
   background: #fff;
   color: var(--violeta-oscuro);
@@ -129,7 +121,7 @@ body {
   box-shadow: 0 15px 35px rgba(0,0,0,.25);
 }
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .hero {
     min-height: 60vh;
@@ -140,9 +132,7 @@ body {
   }
 }
 
-/* ============================= */
 /* BOTONES */
-/* ============================= */
 .btn {
   background: var(--violeta);
   color: #fff;
@@ -171,9 +161,9 @@ body {
   box-shadow: 0 10px 25px rgba(37,211,102,.4);
 }
 
-/* ============================= */
+
 /* SECCIONES */
-/* ============================= */
+
 section {
   padding: 13px 0;
 }
@@ -183,10 +173,7 @@ h2 {
   margin-bottom: 40px;
 }
 
-/* ============================= */
-/* PRODUCTOS */
-/* ============================= */
-/* GRID */
+
 .productos-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -214,7 +201,7 @@ h2 {
 /* BADGES */
 .badge {
   position: relative;
-  display: inline-block; /* 👈 clave */
+  display: inline-block; 
   font-size: 12px;
   padding: 6px 12px;
   border-radius: 30px;
@@ -223,10 +210,10 @@ h2 {
   letter-spacing: .3px;
   overflow: hidden;
    position: absolute;
-  top: 22px;      /* antes 15px */
-  left: 22px;     /* antes 15px */
+  top: 22px;      
+  left: 22px;     
   display: flex;
-  flex-direction: row;  /* 👈 importante */
+  flex-direction: row; 
   gap: 8px;
   z-index: 2;
 }
@@ -431,9 +418,7 @@ h2 {
   box-shadow: 0 10px 25px rgba(37,211,102,.4);
 }
  
-/* ============================= */
- /* CONTACTO */
-/* ============================= */
+
 .contacto {
   background: var(--suave);
   text-align: center;
@@ -445,19 +430,14 @@ h2 {
   font-weight: bold;
 }
 
-/* ============================= */
-/* FOOTER */
-/* ============================= */
+
 .footer {
   text-align: center;
   padding: 20px;
   color: #777;
 }
 
-/* ============================= */
-/* WHATSAPP FLOTANTE */
-/* ============================= */
- 
+
 .whatsapp-float {
   position: fixed;
   bottom: 25px;
@@ -479,9 +459,7 @@ h2 {
   box-shadow: 0 15px 35px rgba(0,0,0,0.3);
 }
 
-/* ============================= */
-/* ANIMACIONES */
-/* ============================= */
+
 .fade-up {
   animation: fadeUp .9s ease forwards;
 }
@@ -491,9 +469,7 @@ h2 {
   to { opacity: 1; transform: translateY(0); }
 }
 
-/* ============================= */
-/* LAZY LOAD */
-/* ============================= */
+
 .lazy {
   opacity: 0;
   filter: blur(12px);
@@ -505,9 +481,7 @@ h2 {
   filter: blur(0);
 }
 
-/* ============================= */
-/* SKELETON */
-/* ============================= */
+
 .skeleton {
   background: linear-gradient(
     90deg,
@@ -524,10 +498,7 @@ h2 {
   0% { background-position: 100% 0; }
   100% { background-position: -100% 0; }
 }
-/* ===============================
-   BOTÓN HAMBURGUESA
-================================ */
-/* BOTÓN HAMBURGUESA */
+
 .header-left {
   display: flex;
   align-items: center;
@@ -553,14 +524,13 @@ h2 {
   height: 50px;
 }
 
-/* OCULTAR BOTÓN CUANDO MENÚ ESTÁ ABIERTO */
+
 #vs-menu-btn.vs-hide {
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
 }
 
-/* MENÚ LATERAL */
 #vs-side-menu {
   position: fixed;
   top: 0;
@@ -578,7 +548,6 @@ h2 {
   left: 0;
 }
 
-/* OVERLAY */
 #vs-menu-overlay {
   position: fixed;
   inset: 0;
@@ -595,15 +564,15 @@ h2 {
 }
 
  
-/* RESET VISUAL BOTONES DEL MENÚ */
+
 .vs-toggle {
   width: 100%;
-  background: transparent;     /* 🔥 saca el blanco */
-  border: none;                /* 🔥 saca borde gris */
+  background: transparent;   
+  border: none;                
   padding: 12px 8px;
   font-size: 16px;
   font-weight: 600;
-  color: #ffffff;              /* letras blancas */
+  color: #ffffff;             
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -629,15 +598,15 @@ h2 {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  background: transparent; /* mismo fondo violeta */
+  background: transparent; 
 }
 
-/* SUBMENÚ VISIBLE */
+
 .vs-item.active .vs-submenu {
   max-height: 500px;
 }
 
-/* ITEMS DEL SUBMENÚ */
+
 .vs-submenu li {
   padding: 8px 0;
   font-size: 14px;
@@ -645,28 +614,28 @@ h2 {
   cursor: pointer;
 }
 
-/* HOVER */
+
 .vs-submenu li:hover {
   opacity: 0.8;
 }
-/* TÍTULO DEL MENÚ */
+
 #vs-side-menu h3 {
-  font-size: 20px;          /* más grande */
+  font-size: 20px;         
   font-weight: 700;
   color: #ffffff;
   margin-bottom: 14px;
   padding-bottom: 12px;
  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 
- /* línea divisoria */
+ /
 }
 
-/* ESPACIO ENTRE TÍTULO Y MENÚ */
+
 .vs-menu {
   margin-top: 10px;
 }
 
-/* CADA CATEGORÍA (opcional, queda más prolijo) */
+
 .vs-item {
   padding-top: 6px;
   padding-bottom: 6px;
@@ -822,33 +791,26 @@ h2 {
   
 }
  
-/* Overlay */
+
 #vs-menu-overlay {
   z-index: 8000;
 }
 
-/* Menú */
+
 #vs-side-menu {
   z-index: 9500;
 }
 
-/* Header */
+
 .header {
   z-index: 9000;
 }
 
-/* Carrito flotante */
+
 .carrito-icono {
   z-index: 9600;
 }
 
-/* ============================= */
-/*          TRABAJOS             */
-/* ============================= */
-
-/* ============================= */
-/* SLIDER TRABAJOS */
-/* ============================= */
 
 .trabajos {
   padding: 100px 0;
@@ -861,9 +823,7 @@ h2 {
   margin-bottom: 50px;
 }
 
-/* ============================= */
-/* SLIDER TRABAJOS */
-/* ============================= */
+
 
 .slider {
   width: 100%;
@@ -873,13 +833,13 @@ h2 {
 }
 
 .slides {
-  display: flex;                /* 👈 ESTO ES CLAVE */
+  display: flex;                
   transition: transform 0.8s ease-in-out;
   width: 100%;
 }
 
 .slide {
-  min-width: 100%;              /* 👈 ESTO TAMBIÉN */
+  min-width: 100%;              
   flex-shrink: 0;
 }
 .slide img {
@@ -912,7 +872,7 @@ h2 {
   transform: scale(1.08);
 }
 
-/* Animación scroll */
+
 .fade-up {
   opacity: 0;
   transform: translateY(40px);
@@ -924,9 +884,6 @@ h2 {
   transform: translateY(0);
 }
 
-/* ============================= */
-/* LIGHTBOX */
-/* ============================= */
 
 .lightbox {
   position: fixed;
