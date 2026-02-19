@@ -13,9 +13,7 @@ const reveals = document.querySelectorAll(".reveal");
     reveals.forEach(el => revealObserver.observe(el));
   }
 
-  // ================================
-  // GALERÍA MODAL
-  // ================================
+  
   const modal = document.getElementById("modal");
   const modalImg = document.getElementById("modalImg");
   const modalClose = document.querySelector(".modal-close");
@@ -38,9 +36,7 @@ const reveals = document.querySelectorAll(".reveal");
     });
   }
 
-  // ================================
-  // WHATSAPP TOOLTIP AUTO
-  // ================================
+
   const tooltip = document.querySelector(".whatsapp-tooltip");
 
   if (tooltip) {
@@ -48,9 +44,7 @@ const reveals = document.querySelectorAll(".reveal");
     setTimeout(() => tooltip.style.opacity = "0", 6000);
   }
 
-  // ================================
-  // LAZY LOADING IMÁGENES + SKELETON
-  // ================================
+  
   const lazyImages = document.querySelectorAll("img.lazy");
 
   if (lazyImages.length) {
@@ -77,9 +71,7 @@ const reveals = document.querySelectorAll(".reveal");
     lazyImages.forEach(img => imageObserver.observe(img));
   }
 
-  // ================================
-  // EVENTOS GA4
-  // ================================
+  
   document.querySelectorAll('a[href*="wa.me"]').forEach(btn => {
     btn.addEventListener("click", () => {
       gtag("event", "click_whatsapp", {
@@ -109,9 +101,7 @@ const reveals = document.querySelectorAll(".reveal");
   });
 
 
-// ================================
-// SCROLL DEPTH 90% (GA4)
-// ================================
+
 let scrollTracked = false;
 
 window.addEventListener("scroll", () => {
@@ -145,21 +135,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const overlay = document.getElementById("vs-menu-overlay");
   const toggles = document.querySelectorAll(".vs-toggle");
 
-  // ABRIR MENÚ
+  
   btn.addEventListener("click", () => {
     menu.classList.add("vs-active");
     overlay.classList.add("vs-active");
     btn.classList.add("vs-hide");
   });
 
-  // CERRAR MENÚ
+
   overlay.addEventListener("click", () => {
     menu.classList.remove("vs-active");
     overlay.classList.remove("vs-active");
     btn.classList.remove("vs-hide");
   });
 
-  // SUBMENÚS
+  
   toggles.forEach(toggle => {
     toggle.addEventListener("click", () => {
       const item = toggle.closest(".vs-item");
@@ -167,7 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 });
- // FILTRADO POR CATEGORÍA
+ 
   document.querySelectorAll(".vs-submenu li").forEach(sub => {
     sub.addEventListener("click", () => {
       const filtro = sub.innerText.toLowerCase();
@@ -182,13 +172,13 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       });
 
-      // Cerrar menú
+      
       document.getElementById("vs-side-menu").classList.remove("vs-active");
       document.getElementById("vs-menu-overlay").classList.remove("vs-active");
       document.getElementById("vs-menu-btn").classList.remove("vs-hide");
     });
   });
-  // BOTÓN WHATSAPP AUTOMÁTICO
+  
 document.querySelectorAll(".producto").forEach(producto => {
   const nombre = producto.querySelector("h3").textContent;
   const boton = producto.querySelector(".btn-whatsapp");
@@ -199,33 +189,27 @@ document.querySelectorAll(".producto").forEach(producto => {
   boton.setAttribute("href", url);
   boton.setAttribute("target", "_blank");
 });
-// FAVORITO
+
 document.querySelectorAll(".btn-favorito").forEach(btn => {
   btn.addEventListener("click", () => {
     btn.classList.toggle("activo");
     btn.textContent = btn.classList.contains("activo") ? "❤️" : "♡";
   });
 });
-// ==========================
-// CARRITO REAL
-// ==========================
+
 
 let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
 const contador = document.getElementById("contador-carrito");
 
-// ==========================
-// ACTUALIZAR CONTADOR
-// ==========================
+
 function actualizarContador() {
   if (contador) {
     contador.textContent = carrito.length;
   }
 }
 
-// ==========================
-// ANIMACIÓN PRODUCTO VOLANDO
-// ==========================
+
 function animarVuelo(imagenElemento) {
 
   const carritoIcono = document.querySelector(".carrito-icono");
@@ -255,9 +239,6 @@ function animarVuelo(imagenElemento) {
   }, 800);
 }
 
-// ==========================
-// ACTIVAR BOTONES CARRITO
-// ==========================
 function activarBotonesCarrito() {
 
   document.querySelectorAll(".btn-carrito").forEach(boton => {
@@ -274,26 +255,26 @@ function activarBotonesCarrito() {
         return;
       }
 
-      // Obtener imagen del producto
+    
       const card = this.closest(".producto");
       const imagen = card ? card.querySelector("img") : null;
 
-      // Animación vuelo
+      
       animarVuelo(imagen);
 
-      // Agregar al carrito
+      
       carrito.push(producto);
       localStorage.setItem("carrito", JSON.stringify(carrito));
 
       actualizarContador();
 
-      // Rebote contador
+      
       contador.classList.add("rebote");
       setTimeout(() => {
         contador.classList.remove("rebote");
       }, 400);
 
-      // Pulse carrito
+      
       const carritoIcono = document.querySelector(".carrito-icono");
       carritoIcono.classList.add("animar");
       setTimeout(() => {
@@ -310,11 +291,6 @@ function activarBotonesCarrito() {
 
 actualizarContador();
 
-
-
-// ==========================
-// LISTA DE PRODUCTOS
-// ==========================
 
 const productos = [
   {
@@ -695,9 +671,6 @@ function renderProductos() {
 
 renderProductos();
 
-// =============================
-// ANIMACIÓN SCROLL
-// =============================
 
 const faders = document.querySelectorAll('.fade-up');
 
@@ -713,15 +686,10 @@ faders.forEach(fader => {
   appearOnScroll.observe(fader);
 });
 
-// =============================
-// LIGHTBOX
-// =============================
+
 
 document.addEventListener("DOMContentLoaded", function () {
 
-  /* =========================
-     LIGHTBOX
-  ========================= */
 
   const lightbox = document.getElementById("lightbox");
   const lightboxImg = document.querySelector(".lightbox-img");
@@ -747,9 +715,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  /* =========================
-     SLIDER
-  ========================= */
+
 
   const slides = document.querySelector(".slides");
   const slide = document.querySelectorAll(".slide");
@@ -775,9 +741,9 @@ window.addEventListener("scroll", () => {
 
   if (!hero) return;
 
-  // Movimiento vertical suave
+
   hero.style.transform = `translateY(${scrollY * 0.2}px)`;
 
-  // Fade progresivo
+  
   hero.style.opacity = 1 - scrollY / 600;
 });
